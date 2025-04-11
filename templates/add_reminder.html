@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Reminder - Medication Reminders</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #ff0000, #000000);
+      color: #fff;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    /* Navbar styling */
+    nav {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav .logo {
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+    nav .links a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav .links a:hover {
+      color: #ff4d4d;
+    }
+    /* Add reminder form styling */
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+    .add-box {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 10px;
+      width: 400px;
+    }
+    .add-box h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ff4d4d;
+    }
+    .add-box label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    .add-box input[type="text"],
+    .add-box input[type="email"],
+    .add-box input[type="time"] {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      background-color: #333;
+      color: #fff;
+    }
+    .add-box button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background-color: #ff0000;
+      color: #fff;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .add-box button:hover {
+      background-color: #cc0000;
+    }
+    footer {
+      text-align: center;
+      padding: 10px;
+      background: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="logo">MedReminder</div>
+    <div class="links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="add_reminder.html">Add Reminder</a>
+      <a href="index.html">Logout</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="add-box">
+      <h2>Add New Reminder</h2>
+      <form action="https://getform.io/f/anlqyyxa" method="POST">
+        <label for="email">Your Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+
+        <label for="medName">Medication Name</label>
+        <input type="text" name="medName" id="medName" placeholder="Medication name" required>
+
+        <label for="dose">Dose</label>
+        <input type="text" name="dose" id="dose" placeholder="e.g., 1 pill" required>
+
+        <label for="time">Time</label>
+        <input type="time" name="time" id="time" required>
+
+        <label for="family">Family Members (separate with commas)</label>
+        <input type="text" name="family" id="family" placeholder="e.g., John, Sarah">
+
+     
+        <input type="hidden" name="_autoresponse" value="Thank you for adding a reminder! Your medication reminder details are:
+
+- Medication: {medName}
+- Dose: {dose}
+- Time: {time}
+
+Stay healthy!">
+
+        <button type="submit">Add Reminder</button>
+      </form>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 - Medication Reminders
+  </footer>
+</body>
+</html>
